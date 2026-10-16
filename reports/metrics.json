@@ -1,0 +1,298 @@
+{
+  "best_model": "linear_regression",
+  "best_model_selected_by": "lowest 5-fold cross-validated RMSLE on the training set",
+  "dataset": {
+    "rows_raw": 4340,
+    "duplicates_removed": 763,
+    "rows_clean": 3577,
+    "rows_train": 2861,
+    "rows_test": 716,
+    "price_summary": {
+      "min": 20000.0,
+      "q1": 200000.0,
+      "median": 350000.0,
+      "mean": 473912.54207436397,
+      "q3": 600000.0,
+      "max": 8900000.0,
+      "skewness_raw": 5.453918181903924,
+      "skewness_log": -0.022951613019529395
+    }
+  },
+  "models": {
+    "dummy": {
+      "n": 716,
+      "r2": -5.853757034657292e-09,
+      "r2_log_price": -0.17153306161043624,
+      "mae_rs": 293893.0204947483,
+      "rmse_rs": 504548.58002164826,
+      "mape": 1.2236605282422803,
+      "median_ape": 0.5797342304555517,
+      "rmsle": 0.8913334886737538,
+      "within_10pct": 0.1005586592178771,
+      "within_20pct": 0.21368715083798884,
+      "bias_median_signed_pct": 0.3540579118190443,
+      "share_overpriced": 0.6340782122905028,
+      "train_r2": 0.0,
+      "train_mape": 1.2005011282030984,
+      "overfit_gap_r2": 5.853757034657292e-09
+    },
+    "linear_regression": {
+      "n": 716,
+      "r2": 0.8709525728399743,
+      "r2_log_price": 0.8910256062975883,
+      "mae_rs": 89211.81871275844,
+      "rmse_rs": 181249.8526449675,
+      "mape": 0.21462737683953692,
+      "median_ape": 0.15542458347233667,
+      "rmsle": 0.2718473976842935,
+      "within_10pct": 0.3324022346368715,
+      "within_20pct": 0.6201117318435754,
+      "bias_median_signed_pct": -0.0018271611212068595,
+      "share_overpriced": 0.4972067039106145,
+      "train_r2": 0.8372639422836649,
+      "train_mape": 0.18872761693159604,
+      "overfit_gap_r2": -0.03368863055630944,
+      "cv_rmsle_best": 0.2823,
+      "cv_r2_best": 0.7956,
+      "cv_mae_best_rs": 94924.0,
+      "best_params": {
+        "model__regressor__alpha": 1
+      },
+      "likely_range": {
+        "target_coverage": 0.8,
+        "test_coverage": 0.8044692737430168,
+        "lower_multiplier": 0.70786442949769,
+        "upper_multiplier": 1.367283551163797
+      }
+    },
+    "random_forest": {
+      "n": 716,
+      "r2": 0.8343883648942578,
+      "r2_log_price": 0.8755808185338099,
+      "mae_rs": 98562.05019181439,
+      "rmse_rs": 205328.10995975815,
+      "mape": 0.23036013597651422,
+      "median_ape": 0.16287031555455883,
+      "rmsle": 0.29047356789227674,
+      "within_10pct": 0.3170391061452514,
+      "within_20pct": 0.5921787709497207,
+      "bias_median_signed_pct": -0.01609192142112883,
+      "share_overpriced": 0.47067039106145253,
+      "train_r2": 0.9523312976529438,
+      "train_mape": 0.07890074434679682,
+      "overfit_gap_r2": 0.11794293275868595,
+      "cv_rmsle_best": 0.2945,
+      "cv_r2_best": 0.7737,
+      "cv_mae_best_rs": 100757.0,
+      "best_params": {
+        "model__regressor__max_depth": null,
+        "model__regressor__max_features": 0.33,
+        "model__regressor__min_samples_leaf": 1,
+        "model__regressor__n_estimators": 400
+      },
+      "likely_range": {
+        "target_coverage": 0.8,
+        "test_coverage": 0.7793296089385475,
+        "lower_multiplier": 0.7110164675272505,
+        "upper_multiplier": 1.3976388076438997
+      }
+    }
+  },
+  "bootstrap_95ci": {
+    "linear_regression": {
+      "r2": [
+        0.8314104737589525,
+        0.9135935577096267
+      ],
+      "mae_rs": [
+        78629.2734059117,
+        101729.84775302676
+      ],
+      "median_ape": [
+        0.14292197551854102,
+        0.17005312421946453
+      ]
+    },
+    "random_forest": {
+      "r2": [
+        0.7895899011099542,
+        0.8770974220570111
+      ],
+      "mae_rs": [
+        86693.80450317705,
+        113335.89560238027
+      ],
+      "median_ape": [
+        0.14875088819285248,
+        0.17915800593620962
+      ]
+    },
+    "rf_minus_linear": {
+      "r2": {
+        "mean": -0.03723092452841449,
+        "ci95": [
+          -0.06726465203447576,
+          -0.007730093015390136
+        ]
+      },
+      "mae_rs": {
+        "mean": 9403.533456016476,
+        "ci95": [
+          3083.8535331608973,
+          15786.145013194928
+        ]
+      },
+      "median_ape": {
+        "mean": 0.008247491788896343,
+        "ci95": [
+          -0.007973882351082196,
+          0.023748068805016592
+        ]
+      },
+      "share_of_resamples_rf_has_lower_mae": 0.003
+    }
+  },
+  "errors_by_price_range": {
+    "Below Rs 2.5 L": {
+      "n": 229,
+      "linear_regression": {
+        "mae_rs": 39244.61691179476,
+        "median_ape": 0.21354882150335877,
+        "mape": 0.3119112389289137
+      },
+      "random_forest": {
+        "mae_rs": 40703.04360876265,
+        "median_ape": 0.22079327771773408,
+        "mape": 0.31960573280800236
+      }
+    },
+    "Rs 2.5 - 5 L": {
+      "n": 241,
+      "linear_regression": {
+        "mae_rs": 59273.119160576636,
+        "median_ape": 0.14042423407403257,
+        "mape": 0.17270951549059502
+      },
+      "random_forest": {
+        "mae_rs": 69257.5051151372,
+        "median_ape": 0.16171571264583467,
+        "mape": 0.20190356697322215
+      }
+    },
+    "Rs 5 - 10 L": {
+      "n": 185,
+      "linear_regression": {
+        "mae_rs": 94642.22321513978,
+        "median_ape": 0.11123792493494009,
+        "mape": 0.14817932260364955
+      },
+      "random_forest": {
+        "mae_rs": 98495.42075202557,
+        "median_ape": 0.11873130144518308,
+        "mape": 0.1530776702403668
+      }
+    },
+    "Rs 10 L and above": {
+      "n": 61,
+      "linear_regression": {
+        "mae_rs": 378606.75267269195,
+        "median_ape": 0.2131332242692002,
+        "mape": 0.21654688831932178
+      },
+      "random_forest": {
+        "mae_rs": 431749.4980173715,
+        "median_ape": 0.21427634182279218,
+        "mape": 0.24213140837929908
+      }
+    }
+  },
+  "importance": {
+    "rf_impurity_grouped": {
+      "car_age": 0.36229,
+      "name_keywords": 0.14822,
+      "brand_tier": 0.10168,
+      "fuel": 0.07797,
+      "model": 0.0752,
+      "transmission": 0.07204,
+      "km_driven": 0.05261,
+      "km_per_year": 0.04218,
+      "brand": 0.03374,
+      "owner_count": 0.02788,
+      "seller_type": 0.00617
+    },
+    "rf_permutation_raw": [
+      {
+        "feature": "year",
+        "mae_increase_rs": 126794.3,
+        "std": 6683.6
+      },
+      {
+        "feature": "name",
+        "mae_increase_rs": 105807.8,
+        "std": 3950.9
+      },
+      {
+        "feature": "fuel",
+        "mae_increase_rs": 41611.2,
+        "std": 3631.0
+      },
+      {
+        "feature": "transmission",
+        "mae_increase_rs": 32781.4,
+        "std": 2872.6
+      },
+      {
+        "feature": "km_driven",
+        "mae_increase_rs": 10642.7,
+        "std": 2210.0
+      },
+      {
+        "feature": "owner",
+        "mae_increase_rs": 3465.5,
+        "std": 742.8
+      },
+      {
+        "feature": "seller_type",
+        "mae_increase_rs": 946.7,
+        "std": 428.9
+      }
+    ],
+    "linear_permutation_raw": [
+      {
+        "feature": "name",
+        "mae_increase_rs": 175325.8,
+        "std": 4161.9
+      },
+      {
+        "feature": "year",
+        "mae_increase_rs": 119420.9,
+        "std": 6276.4
+      },
+      {
+        "feature": "fuel",
+        "mae_increase_rs": 16234.1,
+        "std": 2359.9
+      },
+      {
+        "feature": "transmission",
+        "mae_increase_rs": 6697.7,
+        "std": 1167.0
+      },
+      {
+        "feature": "km_driven",
+        "mae_increase_rs": 6591.0,
+        "std": 1552.4
+      },
+      {
+        "feature": "owner",
+        "mae_increase_rs": 1890.3,
+        "std": 657.3
+      },
+      {
+        "feature": "seller_type",
+        "mae_increase_rs": 1021.6,
+        "std": 725.4
+      }
+    ]
+  }
+}

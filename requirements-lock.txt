@@ -1,0 +1,10 @@
+# Exact versions used to train the saved models (tested on Python 3.13; needs Python 3.12 or newer).
+# scikit-learn "unpickling" version warnings:   pip install -r requirements-lock.txt
+numpy==2.5.3
+pandas==3.0.5
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+joblib==1.6.0
+streamlit==1.66.0
+pytest==9.1.1

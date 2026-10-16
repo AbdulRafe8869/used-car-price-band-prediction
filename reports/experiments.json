@@ -1,0 +1,166 @@
+{
+  "ablation": [
+    {
+      "group": "Full model (all features)",
+      "cv_medape_linear_regression": 0.1538642148738243,
+      "cv_medape_random_forest": 0.1622750277432289,
+      "delta_linear_regression": 0.0,
+      "delta_random_forest": 0.0
+    },
+    {
+      "group": "Without: Name keywords (variant words)",
+      "cv_medape_linear_regression": 0.16152788218435746,
+      "cv_medape_random_forest": 0.17758487133934636,
+      "delta_linear_regression": 0.007663667310533168,
+      "delta_random_forest": 0.01530984359611745
+    },
+    {
+      "group": "Without: Brand tier",
+      "cv_medape_linear_regression": 0.15729905166793973,
+      "cv_medape_random_forest": 0.17132337401452422,
+      "delta_linear_regression": 0.0034348367941154367,
+      "delta_random_forest": 0.009048346271295304
+    },
+    {
+      "group": "Without: Fuel, seller type, transmission",
+      "cv_medape_linear_regression": 0.15817925566858446,
+      "cv_medape_random_forest": 0.16767039110855575,
+      "delta_linear_regression": 0.0043150407947601666,
+      "delta_random_forest": 0.0053953633653268385
+    },
+    {
+      "group": "Without: Owner count",
+      "cv_medape_linear_regression": 0.15536784675321633,
+      "cv_medape_random_forest": 0.16565049100236093,
+      "delta_linear_regression": 0.0015036318793920367,
+      "delta_random_forest": 0.0033754632591320166
+    },
+    {
+      "group": "Without: Age and usage (age, km, km per year)",
+      "cv_medape_linear_regression": 0.24164761311158003,
+      "cv_medape_random_forest": 0.2306888369434737,
+      "delta_linear_regression": 0.08778339823775574,
+      "delta_random_forest": 0.06841380920024479
+    },
+    {
+      "group": "Without: Car identity (brand, model, tier, keywords)",
+      "cv_medape_linear_regression": 0.28340098108492623,
+      "cv_medape_random_forest": 0.29725171933571426,
+      "delta_linear_regression": 0.12953676621110194,
+      "delta_random_forest": 0.13497669159248535
+    }
+  ],
+  "richer_features_v3": {
+    "rows_raw": 8128,
+    "duplicates_removed": 1202,
+    "rows_clean": 6925,
+    "rows_train": 5540,
+    "rows_test": 1385,
+    "missing_spec_values": 208,
+    "results": {
+      "linear_regression": {
+        "base_r2": 0.8446386170341453,
+        "extended_r2": 0.8755942854315345,
+        "base_mae_rs": 77826.7385929343,
+        "extended_mae_rs": 73437.64900361407,
+        "base_mape": 0.16655411961987615,
+        "extended_mape": 0.15930836173685817,
+        "mape_reduction_points": 0.7245757883017984,
+        "mape_reduction_ci95_points": [
+          0.4524317660557475,
+          1.0434215705624772
+        ]
+      },
+      "random_forest": {
+        "base_r2": 0.8465063379084596,
+        "extended_r2": 0.9006627241966658,
+        "base_mae_rs": 82520.87732770834,
+        "extended_mae_rs": 71958.56157651813,
+        "base_mape": 0.17439853179788087,
+        "extended_mape": 0.16215538586252037,
+        "mape_reduction_points": 1.2243145935360493,
+        "mape_reduction_ci95_points": [
+          0.72366913751906,
+          1.7294758563521535
+        ]
+      }
+    }
+  },
+  "external_validation_v4": {
+    "rows": 2032,
+    "median_price_v4": 825000.0,
+    "median_price_main": 350000.0,
+    "price_quantiles_v4": [
+      310500.0000000001,
+      484999.0,
+      825000.0,
+      1875000.0,
+      3994500.0000000005
+    ],
+    "price_quantiles_main": [
+      110000.0,
+      200000.0,
+      350000.0,
+      600000.0,
+      875000.0
+    ],
+    "models": {
+      "linear_regression": {
+        "r2": 0.37673858562318707,
+        "mae_rs": 577212.1396645984,
+        "median_ape": 0.1652253618422669,
+        "mape": 0.21876167010776335,
+        "within_20pct": 0.5816929133858267,
+        "bias_median_signed_pct": -0.09795340022706883,
+        "share_underpriced": 0.6796259842519685,
+        "test_median_ape_main": 0.15542458347233667,
+        "test_bias_main": -0.0018271611212068595
+      },
+      "random_forest": {
+        "r2": 0.30325552767866626,
+        "mae_rs": 656163.4531475329,
+        "median_ape": 0.2003536249859077,
+        "mape": 0.2460305128458035,
+        "within_20pct": 0.4985236220472441,
+        "bias_median_signed_pct": -0.13668339871778906,
+        "share_underpriced": 0.7229330708661418,
+        "test_median_ape_main": 0.16287031555455883,
+        "test_bias_main": -0.01609192142112883
+      }
+    }
+  },
+  "log_vs_raw_target": {
+    "log_price": {
+      "linear_regression": {
+        "r2": 0.8709525728399743,
+        "mae_rs": 89211.81871275844,
+        "median_ape": 0.15542458347233667,
+        "mape": 0.21462737683953692,
+        "negative_predictions": 0
+      },
+      "random_forest": {
+        "r2": 0.8343883648942579,
+        "mae_rs": 98562.05019181436,
+        "median_ape": 0.16287031555455805,
+        "mape": 0.23036013597651422,
+        "negative_predictions": 0
+      }
+    },
+    "raw_price": {
+      "linear_regression": {
+        "r2": 0.7325568060535927,
+        "mae_rs": 138950.8950590423,
+        "median_ape": 0.24572931374715734,
+        "mape": 0.4671001459564234,
+        "negative_predictions": 38
+      },
+      "random_forest": {
+        "r2": 0.8479329626817629,
+        "mae_rs": 98076.28973937413,
+        "median_ape": 0.16006436651471984,
+        "mape": 0.25113258175003916,
+        "negative_predictions": 0
+      }
+    }
+  }
+}

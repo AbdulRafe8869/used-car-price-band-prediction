@@ -1,0 +1,315 @@
+{
+  "trained_at_utc": "2026-10-15T22:11:54+00:00",
+  "python": "3.13.16",
+  "scikit_learn": "1.9.1",
+  "random_state": 42,
+  "reference_year": 2020,
+  "year_range": [
+    1992,
+    2020
+  ],
+  "km_range": [
+    1,
+    806599
+  ],
+  "price_range": [
+    20000.0,
+    8900000.0
+  ],
+  "choices": {
+    "fuel": [
+      "CNG",
+      "Diesel",
+      "Electric",
+      "LPG",
+      "Petrol"
+    ],
+    "seller_type": [
+      "Dealer",
+      "Individual",
+      "Trustmark Dealer"
+    ],
+    "transmission": [
+      "Automatic",
+      "Manual"
+    ],
+    "owner": [
+      "Test Drive Car",
+      "First Owner",
+      "Second Owner",
+      "Third Owner",
+      "Fourth & Above Owner"
+    ]
+  },
+  "brands": [
+    "Audi",
+    "BMW",
+    "Chevrolet",
+    "Datsun",
+    "Fiat",
+    "Ford",
+    "Honda",
+    "Hyundai",
+    "Jaguar",
+    "Land Rover",
+    "Mahindra",
+    "Maruti",
+    "Mercedes-Benz",
+    "Mitsubishi",
+    "Nissan",
+    "Renault",
+    "Skoda",
+    "Tata",
+    "Toyota",
+    "Volkswagen"
+  ],
+  "models_by_brand": {
+    "Audi": [
+      "A4",
+      "A6",
+      "A8",
+      "Q3",
+      "Q5"
+    ],
+    "BMW": [
+      "3",
+      "5",
+      "7",
+      "X1"
+    ],
+    "Chevrolet": [
+      "Aveo",
+      "Beat",
+      "Captiva",
+      "Cruze",
+      "Enjoy",
+      "Optra",
+      "Sail",
+      "Spark",
+      "Tavera"
+    ],
+    "Datsun": [
+      "Go",
+      "Redigo"
+    ],
+    "Fiat": [
+      "Avventura",
+      "Grande",
+      "Linea",
+      "Palio",
+      "Punto"
+    ],
+    "Ford": [
+      "Aspire",
+      "Classic",
+      "Ecosport",
+      "Endeavour",
+      "Fiesta",
+      "Figo",
+      "Freestyle",
+      "Ikon"
+    ],
+    "Honda": [
+      "Accord",
+      "Amaze",
+      "Br-V",
+      "Brio",
+      "Brv",
+      "City",
+      "Civic",
+      "Jazz",
+      "Mobilio",
+      "Wr-V"
+    ],
+    "Hyundai": [
+      "Accent",
+      "Creta",
+      "Elantra",
+      "Elite",
+      "Eon",
+      "Getz",
+      "Grand",
+      "I10",
+      "I20",
+      "Santa",
+      "Santro",
+      "Sonata",
+      "Tucson",
+      "Venue",
+      "Verna",
+      "Xcent"
+    ],
+    "Jaguar": [
+      "Xf"
+    ],
+    "Land Rover": [
+      "Discovery",
+      "Range"
+    ],
+    "Mahindra": [
+      "Bolero",
+      "Jeep",
+      "Kuv",
+      "Marazzo",
+      "Quanto",
+      "Renault",
+      "Scorpio",
+      "Thar",
+      "Tuv",
+      "Verito",
+      "Xuv300",
+      "Xuv500",
+      "Xylo"
+    ],
+    "Maruti": [
+      "800",
+      "A-Star",
+      "Alto",
+      "Baleno",
+      "Celerio",
+      "Ciaz",
+      "Eeco",
+      "Ertiga",
+      "Esteem",
+      "Gypsy",
+      "Ignis",
+      "Omni",
+      "Ritz",
+      "S-Cross",
+      "Swift",
+      "Sx4",
+      "Vitara",
+      "Wagon",
+      "Zen"
+    ],
+    "Mercedes-Benz": [
+      "E-Class",
+      "New"
+    ],
+    "Mitsubishi": [
+      "Pajero"
+    ],
+    "Nissan": [
+      "Kicks",
+      "Micra",
+      "Sunny",
+      "Terrano"
+    ],
+    "Renault": [
+      "Captur",
+      "Duster",
+      "Fluence",
+      "Kwid",
+      "Lodgy",
+      "Pulse",
+      "Scala"
+    ],
+    "Skoda": [
+      "Fabia",
+      "Laura",
+      "Octavia",
+      "Rapid",
+      "Superb",
+      "Yeti"
+    ],
+    "Tata": [
+      "Altroz",
+      "Aria",
+      "Bolt",
+      "Harrier",
+      "Hexa",
+      "Indica",
+      "Indigo",
+      "Manza",
+      "Nano",
+      "New",
+      "Nexon",
+      "Safari",
+      "Sumo",
+      "Tiago",
+      "Tigor",
+      "Xenon",
+      "Zest"
+    ],
+    "Toyota": [
+      "Camry",
+      "Corolla",
+      "Etios",
+      "Fortuner",
+      "Innova"
+    ],
+    "Volkswagen": [
+      "Ameo",
+      "Jetta",
+      "Polo",
+      "Vento"
+    ]
+  },
+  "cleaning_report": {
+    "rows_raw": 4340,
+    "missing_per_column": {
+      "name": 0,
+      "year": 0,
+      "selling_price": 0,
+      "km_driven": 0,
+      "fuel": 0,
+      "seller_type": 0,
+      "transmission": 0,
+      "owner": 0
+    },
+    "missing_total": 0,
+    "rows_dropped_missing_target": 0,
+    "duplicates_removed": 763,
+    "duplicates_pct": 17.58,
+    "invalid_rows_removed": 0,
+    "rows_clean": 3577,
+    "price_summary": {
+      "min": 20000.0,
+      "q1": 200000.0,
+      "median": 350000.0,
+      "mean": 473912.54207436397,
+      "q3": 600000.0,
+      "max": 8900000.0,
+      "skewness_raw": 5.453918181903924,
+      "skewness_log": -0.022951613019529395
+    },
+    "rows_train": 2861,
+    "rows_test": 716
+  },
+  "best_params": {
+    "linear_regression": {
+      "model__regressor__alpha": 1
+    },
+    "random_forest": {
+      "model__regressor__max_depth": null,
+      "model__regressor__max_features": 0.33,
+      "model__regressor__min_samples_leaf": 1,
+      "model__regressor__n_estimators": 400
+    }
+  },
+  "cv_best_rmsle": {
+    "linear_regression": 0.2823,
+    "random_forest": 0.2945
+  },
+  "cv_best_r2": {
+    "linear_regression": 0.7956,
+    "random_forest": 0.7737
+  },
+  "cv_best_mae": {
+    "linear_regression": 94924.0,
+    "random_forest": 100757.0
+  },
+  "price_interval": {
+    "linear_regression": {
+      "lower_multiplier": 0.70786442949769,
+      "upper_multiplier": 1.367283551163797,
+      "coverage_target": 0.8
+    },
+    "random_forest": {
+      "lower_multiplier": 0.7110164675272505,
+      "upper_multiplier": 1.3976388076438997,
+      "coverage_target": 0.8
+    }
+  },
+  "grid_mode": "full"
+}
